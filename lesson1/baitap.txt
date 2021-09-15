@@ -1,0 +1,16 @@
+tạo csdl "b1_php2" gồm 1 bảng
+users
+id
+name
+email
+
+điền sẵn thông tin cho 5 bản ghi trong bảng
+tạo ra lớp User 
+trong hàm khởi tạo thực hiện gán giá trị cho thuộc tính $connect của object 
+(sử dụng pdo để kết nối project => db)
+
+tạo hàm getListUser(): thực thi câu lệnh select * from users
+sau đó return toàn bộ dữ liệu trả về từ câu lệnh trên
+
+
+hiển thị dữ liệu lấy đc từ hàm getListUser() ra thành table
