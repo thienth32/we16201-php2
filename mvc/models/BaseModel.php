@@ -29,6 +29,13 @@ class BaseModel{
 
         return null;
     }
+
+    static function executeQuery($sql){
+        $model = new static();
+        $conn = $model->getConnect();
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+    }
 }
 
 
