@@ -1,0 +1,7 @@
+Sử dụng cơ sở dữ liệu we16201.sql 
+Sử dụng mô hình mvc để thực hiện các nhiệm vụ
+Hiển thị dữ liệu dạng danh sách
+Tạo màn hình thêm mới & thực hiện lưu dữ liệu tạo mới vào db
+Tạo màn hình cập nhật & thực hiện lưu dữ liệu cập nhật vào db
+Thực hiện nhiệm vụ xóa dữ liệu khỏi cơ sở dữ liệu khi bấm vào nút xóa
+*** thực hiện các nhiệm vụ trên cho cả 2 bảng users & products ***
