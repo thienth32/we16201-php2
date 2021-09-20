@@ -15,6 +15,20 @@ class BaseModel{
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
     }
+
+    static function find($id){
+        $model = new static();
+        $queryBuilder = "select * from " . $model->table . " where id = $id";
+        $conn = $model->getConnect();
+        $stmt = $conn->prepare($queryBuilder);
+        $stmt->execute();
+        $data = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
+        if(count($data) > 0){
+            return $data[0];
+        }
+
+        return null;
+    }
 }
 
 

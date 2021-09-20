@@ -17,6 +17,10 @@
             <tr>
                 <td><?= $item->id ?></td>
                 <td><?= $item->name ?></td>
+                <td>
+                    <a href="?ctrl=ProductController&action=detail&id=<?= $item->id ?>">Sửa</a>
+                </td>
+
             </tr>
         <?php endforeach ?>
         </tbody>
