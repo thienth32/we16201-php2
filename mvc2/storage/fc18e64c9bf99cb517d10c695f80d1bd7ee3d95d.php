@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <!-- Mirrored from massive.markup.themebucket.net/shop-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Sep 2017 04:55:09 GMT -->
 <head>
     <meta charset="utf-8">
@@ -77,39 +76,8 @@
                             </div>
                             <!--product option-->
                             <div class="row">
-                                <div class="col-md-4">
-                                    <!--product list-->
-                                    <div class="product-list">
-                                        <div class="product-img">
-                                            <a href="#">
-                                                <img src="<?php echo e(PUBLIC_PATH); ?>assets/img/product/1.jpg" alt="" />
-                                            </a>
-                                            <a href="#">
-                                                <img src="<?php echo e(PUBLIC_PATH); ?>assets/img/product/1-alt.jpg" alt="" />
-                                            </a>
-                                            <div class="sale-label">
-                                                Sale
-                                            </div>
-                                        </div>
-                                        <div class="product-title">
-                                            <h5><a href="#">CROPPED SKINNY ISA JEANS</a></h5>
-                                        </div>
-                                        <div class="product-price">
-                                            <del>$79.00</del> $59.99
-                                        </div>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                        <div class="product-btn">
-                                            <a href="#" class="btn btn-extra-small btn-dark-border  "><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        </div>
-                                    </div>
-                                    <!--product list-->
-                                </div>
+                                
+                                <?php echo $__env->yieldContent('content'); ?>
                             </div>
                         </div>
 
