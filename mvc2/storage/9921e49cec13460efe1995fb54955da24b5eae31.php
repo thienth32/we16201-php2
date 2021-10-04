@@ -1,4 +1,4 @@
-<form action="" method="POST">
+<form action="" method="POST" enctype="multipart/form-data">
     <div class="form-group">
       <label for="">Name</label>
       <input type="text" name="name" id="" class="form-control" placeholder="" aria-describedby="helpId">
@@ -18,5 +18,12 @@
                 <option value="<?php echo e($key); ?>"><?php echo e($val); ?></option>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </select>
+    </div>
+    <div class="form-group">
+        <label for="">Avatar</label>
+        <input type="file" name="image" class="form-control">
+    </div>
+    <div>
+        <button type="submit">Tạo user</button>
     </div>
 </form><?php /**PATH /Library/WebServer/Documents/we16201-php2/mvc2/app/views/users/add-form.blade.php ENDPATH**/ ?>

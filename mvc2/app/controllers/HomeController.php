@@ -15,6 +15,17 @@ class HomeController extends BaseController{
     public function addUserForm(){
         $this->render('users.add-form');
     }
+    public function saveAddUser(){
+        $model = new User();
+        $model->name = $_POST['name'];
+        $model->email = $_POST['email'];
+        $model->gender = $_POST['gender'];
+        $model->password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        
+        $model->save();
+        header('location: ' . BASE_URL);
+        die;
+    }
 }
 
 

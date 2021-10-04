@@ -12,7 +12,9 @@ class Routing{
         $router->get('/', [HomeController::class, 'index']);
 
         $router->get('about', [HomeController::class,  'about']);
+
         $router->get('add-user', [HomeController::class,  'addUserForm']);
+        $router->post('add-user', [HomeController::class,  'saveAddUser']);
 
         # NB. You can cache the return value from $router->getData() so you don't have to create the routes each request - massive speed gains
         $dispatcher = new Dispatcher($router->getData());
