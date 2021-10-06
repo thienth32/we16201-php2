@@ -15,8 +15,13 @@ class Routing{
 
         $router->get('about', [HomeController::class,  'about']);
 
+        $router->get('remove-user/{id}', [HomeController::class,  'removeUser']);
         $router->get('add-user', [HomeController::class,  'addUserForm']);
         $router->post('add-user', [HomeController::class,  'saveAddUser']);
+
+        $router->get('edit-user/{id}', [HomeController::class,  'editUserForm']);
+        $router->post('edit-user/{id}', [HomeController::class,  'saveEditUser']);
+
         $router->get('admin/san-pham', [ProductController::class,  'list']);
         $router->get('admin/danh-muc/{id}', [CategoryController::class,  'detail']);
 

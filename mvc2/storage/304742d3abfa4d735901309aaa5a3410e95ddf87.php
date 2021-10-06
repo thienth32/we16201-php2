@@ -3,27 +3,38 @@
     <thead>
         <th>ID</th>
         <th>Name</th>
+        <th>Email</th>
         <th>Gender</th>
         <th>Age</th>
         <th>Avatar</th>
+        <th>
+            <a href="<?php echo e(BASE_URL . 'add-user'); ?>">Tạo mới</a>
+        </th>
     </thead>
     <tbody>
         <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $u): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <tr>
-            <td><?php echo e($u['id']); ?></td>
-            <td><?php echo e($u['name']); ?></td>
+            <td><?php echo e($u->id); ?></td>
+            <td><?php echo e($u->name); ?></td>
+            <td><?php echo e($u->email); ?></td>
             <td>
-                <?php if($u['gender'] == 1): ?>
-                Male
+                <?php if($u->gender == 1): ?>
+                Nam
+                <?php elseif($u->gender == 2): ?>
+                Nữ
                 <?php else: ?>
-                Female
+                Khác
                 <?php endif; ?>
             </td>
-            <td><?php echo e($u['age']); ?></td>
+            <td><?php echo e($u->age); ?></td>
             <td>
-                <?php if(!empty($u['avatar'])): ?>
-                <img src="<?php echo e(PUBLIC_PATH . $u['avatar']); ?>" width="70">
+                <?php if(!empty($u->avatar)): ?>
+                <img src="<?php echo e(PUBLIC_PATH . $u->avatar); ?>" width="70">
                 <?php endif; ?>
+            </td>
+            <td>
+                <a href="<?php echo e(BASE_URL . 'edit-user/' . $u->id); ?>">Sửa</a>
+                <a href="<?php echo e(BASE_URL . 'remove-user/' . $u->id); ?>">Xóa</a>
             </td>
         </tr>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
