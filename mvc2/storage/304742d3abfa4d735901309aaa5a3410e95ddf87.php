@@ -5,7 +5,7 @@
         <th>Name</th>
         <th>Gender</th>
         <th>Age</th>
-        <th>Biology</th>
+        <th>Avatar</th>
     </thead>
     <tbody>
         <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $u): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -21,9 +21,8 @@
             </td>
             <td><?php echo e($u['age']); ?></td>
             <td>
-                <?php if(isset($u['bio'])): ?>
-                    <?php echo $u['bio']; ?>
-
+                <?php if(!empty($u['avatar'])): ?>
+                <img src="<?php echo e(PUBLIC_PATH . $u['avatar']); ?>" width="70">
                 <?php endif; ?>
             </td>
         </tr>

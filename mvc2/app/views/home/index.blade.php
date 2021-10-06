@@ -6,7 +6,7 @@
         <th>Name</th>
         <th>Gender</th>
         <th>Age</th>
-        <th>Biology</th>
+        <th>Avatar</th>
     </thead>
     <tbody>
         @foreach($users as $u)
@@ -22,9 +22,9 @@
             </td>
             <td>{{$u['age']}}</td>
             <td>
-                @isset($u['bio'])
-                    {!! $u['bio'] !!}
-                @endisset
+                @if(!empty($u['avatar']))
+                <img src="{{PUBLIC_PATH . $u['avatar']}}" width="70">
+                @endif
             </td>
         </tr>
         @endforeach

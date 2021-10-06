@@ -17,11 +17,15 @@ class HomeController extends BaseController{
     }
     public function saveAddUser(){
         $model = new User();
-        $model->name = $_POST['name'];
-        $model->email = $_POST['email'];
-        $model->gender = $_POST['gender'];
+        $model->fill($_POST); // check $fillable trong model
         $model->password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-        
+        // lưu ảnh
+        $uploadFile = $_FILES['image'];
+        if($uploadFile['size'] > 0){
+            $filename = uniqid() . '-' .$uploadFile['name'];
+            move_uploaded_file($uploadFile['tmp_name'], './public/uploads/' . $filename);
+            $model->avatar = 'uploads/' . $filename;
+        }
         $model->save();
         header('location: ' . BASE_URL);
         die;
