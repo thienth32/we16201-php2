@@ -1,14 +1,13 @@
 <?php
 namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
+use App\Models\Category;
 
 class CategoryController extends BaseController{
     public function detail($id){
-        // $products = Product::all();
-        var_dump($id);
-        die;
-
-        $this->render('admin.product.index', compact('products'));
+        $category = Category::find($id);
+        
+        $this->render('admin.category.detail', compact('category'));
     }
 }
 
