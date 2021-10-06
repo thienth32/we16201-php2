@@ -10,7 +10,9 @@
         <tr>
             <td><?php echo e($p->id); ?></td>
             <td><?php echo e($p->name); ?></td>
-            <td><?php echo e($p->cate_id); ?></td>
+            <td>
+                <a href="<?php echo e(BASE_URL . 'admin/danh-muc/' . $p->category->id); ?>"><?php echo e($p->category->name); ?></a>
+            </td>
         </tr>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </tbody>

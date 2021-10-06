@@ -10,7 +10,9 @@
         <tr>
             <td>{{$p->id}}</td>
             <td>{{$p->name}}</td>
-            <td>{{$p->cate_id}}</td>
+            <td>
+                <a href="{{BASE_URL . 'admin/danh-muc/' . $p->category->id}}">{{$p->category->name}}</a>
+            </td>
         </tr>
         @endforeach
     </tbody>
