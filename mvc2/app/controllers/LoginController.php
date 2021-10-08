@@ -28,6 +28,12 @@ class LoginController extends BaseController{
         $this->render('auth.login', compact('msg'));
     }
 
+    public function logout(){
+        unset($_SESSION['auth']);
+        header('location: ' . BASE_URL);
+        die;
+    }
+
 }
 
 
