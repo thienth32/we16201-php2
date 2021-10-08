@@ -1,5 +1,6 @@
 @extends('client-layout.main')
 @section('content')
+<h3>Hello, {{$_SESSION['auth']['name']}}</h3>
 <table>
     <thead>
         <th>ID</th>

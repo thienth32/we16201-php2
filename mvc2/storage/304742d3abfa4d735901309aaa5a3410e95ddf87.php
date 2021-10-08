@@ -1,4 +1,5 @@
 <?php $__env->startSection('content'); ?>
+<h3>Hello, <?php echo e($_SESSION['auth']['name']); ?></h3>
 <table>
     <thead>
         <th>ID</th>
