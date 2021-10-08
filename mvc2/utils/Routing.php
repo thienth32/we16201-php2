@@ -32,6 +32,7 @@ class Routing{
         $router->get('add-user', [HomeController::class,  'addUserForm']);
         $router->post('add-user', [HomeController::class,  'saveAddUser']);
         $router->any('logout', [LoginController::class,  'logout']);
+        $router->get('demo-admin-layout', [ProductController::class, 'demo']);
 
         $router->group(['before' => 'auth'], function($router){
             $router->get('remove-user/{id}', [HomeController::class,  'removeUser']);

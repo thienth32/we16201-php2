@@ -1,5 +1,9 @@
+@extends('admin-layout.main')
+@section('title', 'Danh sách sản phẩm')
+@section('content')
+    
 
-<table>
+<table class="table table-hover">
     <thead>
         <th>ID</th>
         <th>Name</th>
@@ -17,3 +21,5 @@
         @endforeach
     </tbody>
 </table>
+
+@endsection

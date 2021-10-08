@@ -8,6 +8,10 @@ class ProductController extends BaseController{
 
         $this->render('admin.product.index', compact('products'));
     }
+
+    public function demo(){
+        return $this->render('admin-layout.main');
+    }
 }
 
 ?>
